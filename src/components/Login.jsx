@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, {useCallback, useState} from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import Loader from './Loader';
 import "./Login.css";
@@ -9,8 +9,9 @@ export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login, register } = useAuth();
+  const { login, register } = useAuth()
   const [authLoading, setAuthLoading] = useState(false);
+
 
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
@@ -18,11 +19,13 @@ export default function Login() {
     setError('');
 
     const success = isLogin
-      ? await login(username, password)
+      ? await login(username, password).catch(()=>{
+        setError("Login failed");
+        })
       : await register(username, password);
     console.log('success :' , success);
     if (!success) {
-      setError(isLogin ? 'Login failed' : 'Registration failed');
+      setError(isLogin ? 'Login failed, you must register' : 'Registration failed, you have already an account');
     }
     setAuthLoading(false);
 

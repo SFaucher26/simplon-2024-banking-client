@@ -6,6 +6,9 @@ export async function login(username, password) {
       method: 'POST',
       body: JSON.stringify({ username, password })
     });
+    if (response && response.token) {
+      localStorage.setItem('user', JSON.stringify(response));
+    }
     return response;
   } catch (error) {
     console.error('Login failed :', error.message)

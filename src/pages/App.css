@@ -3,6 +3,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 16px;
+
 }
 
 .header {
@@ -118,7 +119,7 @@
 .nav-links {
   display: flex;
   gap: 0.5rem;
-  margin: 0 1rem;
+
 }
 
 .nav-links a {
@@ -265,6 +266,7 @@ textarea {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 2;
 }
 
 .fab-button:hover {
@@ -278,6 +280,9 @@ textarea {
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   padding: 1rem;
+  max-height: 350px;
+  overflow-y: auto;
+
 }
 
 .category-item,

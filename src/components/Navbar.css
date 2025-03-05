@@ -1,0 +1,58 @@
+/* Style général */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* Liens visibles en mode desktop */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Style du bouton menu burger */
+.burger-menu {
+    display: none;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Bouton Logout */
+.logout-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mode Mobile */
+@media (max-width: 768px) {
+    /* Cache les liens en mode mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        padding: 3px 3px;
+    }
+
+    /* Affiche le menu lorsqu'on clique sur ☰ */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Icône burger visible sur mobile */
+    .burger-menu {
+        display: block;
+    }
+}

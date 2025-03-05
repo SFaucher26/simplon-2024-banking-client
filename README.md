@@ -83,17 +83,42 @@ Après étude des vidéos et lecture des feedback des utilisateurs, plusieurs pr
 Après mise en place d'une CI d'ux avec lighthouse, plusieurs problèmes apparaissent également :
 - Un mauvais contraste entre le background-color et le text des boutons de la page login,
 - du javascript inutilisé doit être supprimé pour améliorer les performances,
-- syntaxe javascript ancienne à modifier en jsx par exemple pour optimiser la compatibilité avec les navigateurs et la perfomrances,
 - certaines ressources bloquent le rendu initial avec des async ou des defer par exemple,
 - le cache n'est pas bien géré, à mettre en place pour les ressources statiques. 
 
 
 ## RAPPORT DES MODIFICATIONS APPORTEES ##
 
-Modification du background-color des button de la page de Login / Register après étude du ratio du contraste 
+1- Modification du background-color des button de la page de Login / Register après étude du ratio du contraste 
 
 Avant 
 ![img_1.png](img_1.png)
 
 Après
 ![img.png](img.png)
+
+2- Modification du message d'erreur pour plus de clarté lors du login 
+
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
+3- Sauvegarde du User connecté dans le localStorage de son navigateur pour qu'il puisse rester sur la page après rechargement de celle-ci.
+
+![img_4.png](img_4.png)
+
+4- Mise en place d'un menu burger responsive lors du passage en mode mobile 
+
+![img_5.png](img_5.png)
+
+5- Changement de l'ordre des items pour qu'intuitivement le user remplisse les modes de paiement avant de créer des transactions
+
+![img_7.png](img_7.png)
+
+6- Rajout d'un overflow : y sur la classe des categories afin que l'ajout de celles-ci ne cachent pas le bouton +
+
+![img_6.png](img_6.png)
+
+7- Changement du background du body pour un meilleur contraste comme suggéré par les recommandations de lighthouse
+
+
