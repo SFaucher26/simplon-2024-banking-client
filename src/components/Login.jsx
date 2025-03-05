@@ -26,7 +26,7 @@ export default function Login() {
     }
     setAuthLoading(false);
 
-  }, [isLogin, username, password, login, register, setAuthLoading, error]);
+  }, [isLogin, username, password, login, register, setAuthLoading]);
 
   return (
     <div className="login-container">
