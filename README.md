@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## ETUDE RAPPORT UX ##
+
+Après étude des vidéos et lecture des feedback des utilisateurs, plusieurs problèmes apparaissent :
+
+- Mauvaise gestion du message d'erreur si le user n'est pas enregistré lors du Login,
+- mauvaise persistance des données de formulaire,
+- manque d'explications sur le  parcours utilisateur notamment ordre des actions (entrer les moyens de paiements avant de créer des transactions),
+- pour la version mobile les items de la navbar débordent du champ visuel,
+- Les imputs sont trop petits,
+- les utilisateurs sont obligés de se logger à chaque fois car leur session n'est pas sauvegardée en localStorage. 
+
+Après mise en place d'une CI d'ux avec lighthouse, plusieurs problèmes apparaissent également :
+- Un mauvais contraste entre le background-color et le text des boutons de la page login,
+- du javascript inutilisé doit être supprimé pour améliorer les performances,
+- syntaxe javascript ancienne à modifier en jsx par exemple pour optimiser la compatibilité avec les navigateurs et la perfomrances,
+- certaines ressources bloquent le rendu initial avec des async ou des defer par exemple,
+- le cache n'est pas bien géré, à mettre en place pour les ressources statiques. 
+
+
+## RAPPORT DES MODIFICATIONS APPORTEES ##
+
+Modification du background-color des button de la page de Login / Register après étude du ratio du contraste 
+
+Avant 
+![img_1.png](img_1.png)
+
+Après
+![img.png](img.png)
